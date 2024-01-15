@@ -135,5 +135,14 @@ describe('Central de Atendimento ao Cliente TAT', function() {
             cy.wrap($radio).should('be.checked')
         })
     })
+
+    it('CACTAT-17: Check both checkboxes and uncheck the last one', function() {
+        cy.get("input[type='checkbox']")
+        .check()
+        .should('be.checked')
+        .last()
+        .uncheck()
+        .should('not.be.checked')
+    })
 })
 
