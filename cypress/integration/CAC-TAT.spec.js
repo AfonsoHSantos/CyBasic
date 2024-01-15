@@ -120,5 +120,12 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .select(1)
         .should('have.value', 'blog')
     })
+
+    it('CACTAT-15: Check Service Type "Feedback"', function() {
+        cy.get("input[type='radio'][value='feedback']")
+        .check()
+        .should('have.value', 'feedback')
+    })
+
 })
 
