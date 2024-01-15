@@ -36,5 +36,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.viewSuccesfullMessage()
     })
+
+    it('CACTAT-11: "Telefone" field remains blank when non-digits are added to the field', function() {
+        cy.get("input[id='phone-checkbox']").check()
+
+        cy.get("input[id='phone']").type('Phone Number').should('have.value', '')
+    })
 })
 
