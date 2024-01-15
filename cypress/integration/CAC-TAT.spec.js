@@ -175,5 +175,15 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         cy.get("div#privacy a")
        .should('have.attr', 'target', '_blank')
     })
+
+    it('CACTAT-22: Access Policy Privacy page removing blank attribute', function() {
+        cy.get("div#privacy a")
+        .invoke('removeAttr', 'target')
+        .click()
+        
+        cy.get('h1#title')
+        .should('have.text', 'CAC TAT - Política de privacidade')
+    })
+
 })
 
