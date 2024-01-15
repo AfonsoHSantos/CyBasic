@@ -127,5 +127,13 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .should('have.value', 'feedback')
     })
 
+    it('CACTAT-16: Check each Service Type', function() {
+        cy.get("input[type='radio']")
+        .should('have.length', 3)
+        .each(function($radio) {
+            cy.wrap($radio).check()
+            cy.wrap($radio).should('be.checked')
+        })
+    })
 })
 
