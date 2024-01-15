@@ -42,5 +42,21 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.get("input[id='phone']").type('Phone Number').should('have.value', '')
     })
+
+    it('CACTAT-5: Error message is displayed when phone is a mandatory field but is not filled', function() {
+        cy.get("input[id='firstName']").type('Afonso')
+
+        cy.get("input[id='lastName']").type('Santos')
+
+        cy.get("input[id='email']").type('contatoafonsohenrique@gmail.com')
+
+        cy.get("textarea[id='open-text-area']").type('I can not access my course', {delay: 0})
+
+        cy.get("input[id='phone-checkbox']").check()
+        
+        cy.clickSubmitButton()
+
+        cy.viewSuccesfullMessage()
+    })
 })
 
