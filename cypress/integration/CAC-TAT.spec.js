@@ -144,5 +144,13 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .uncheck()
         .should('not.be.checked')
     })
+
+    it('CACTAT-18: Upload a file from fixtures dir', function() {
+        cy.get("input[id='file-upload']")
+        .selectFile('cypress/fixtures/example.json')
+        .should(function($input){
+            expect($input[0].files[0].name).to.equal('example.json')
+        })
+    })
 })
 
