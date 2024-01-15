@@ -96,5 +96,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.viewSuccesfullMessage()
     })
+
+    it('CACTAT-9: Submit form using Custom Command', function() {
+        cy.fillMandatoryFieldsAndSubmit()
+
+        cy.viewErrorMessage()
+    })
 })
 
