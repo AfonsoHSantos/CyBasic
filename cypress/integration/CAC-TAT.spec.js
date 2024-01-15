@@ -91,5 +91,10 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .should('have.value', '')
     })
 
+    it('CACTAT-7: Error message when mandatory fields are not filled', function() {
+        cy.clickSubmitButton()
+
+        cy.viewSuccesfullMessage()
+    })
 })
 
