@@ -13,6 +13,8 @@ Run `npm install` (or `npm i` for the short version) to install the dev dependen
 
 ## Tests
 
+The tests are documented in this Jira Task: [CAC TAT Test Automation](https://afonsohsantos.atlassian.net/browse/CT1-1)
+
 You can run the tests simulating a desktop or mobile viewport.
 
 ### Desktop
