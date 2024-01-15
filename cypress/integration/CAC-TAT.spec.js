@@ -114,5 +114,11 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .select('mentoria')
         .should('have.value', 'mentoria')
     })
+
+    it('CACTAT-14: Selects the product "Blogs" by index', function() {
+        cy.get("select[id='product']")
+        .select(1)
+        .should('have.value', 'blog')
+    })
 })
 
