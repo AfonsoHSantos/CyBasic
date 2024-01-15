@@ -102,5 +102,12 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.viewErrorMessage()
     })
+
+    it('CACTAT-12: Selects the product "Youtube" by value', function() {
+        cy.get("select[id='product']")
+        .select('YouTube')
+        .should('have.value', 'youtube')
+    })
+
 })
 
