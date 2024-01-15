@@ -171,5 +171,9 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         })
     })
 
+    it('CACTAT-21: Verify Policy Privacy page is opened in a new tab without click', function() {
+        cy.get("div#privacy a")
+       .should('have.attr', 'target', '_blank')
+    })
 })
 
