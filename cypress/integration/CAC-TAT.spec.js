@@ -58,5 +58,38 @@ describe('Central de Atendimento ao Cliente TAT', function() {
 
         cy.viewSuccesfullMessage()
     })
+
+    it('CACTAT-6: Fill mandatory fields and clear them', function() {
+        cy.get("input[id='firstName']")
+        .type('Afonso')
+        .should('have.value', 'Afonso')
+        .clear()
+        .should('have.value', '')
+
+        cy.get("input[id='lastName']")
+        .type('Santos')
+        .should('have.value', 'Santos')
+        .clear()
+        .should('have.value', '')
+
+        cy.get("input[id='email']")
+        .type('contatoafonsohenrique@gmail.com')
+        .should('have.value', 'contatoafonsohenrique@gmail.com')
+        .clear()
+        .should('have.value', '')
+
+        cy.get("textarea[id='open-text-area']")
+        .type('I can not access my course', {delay: 0})
+        .should('have.value', 'I can not access my course')
+        .clear()
+        .should('have.value', '')
+
+        cy.get("input[id='phone']")
+        .type('12345678')
+        .should('have.value', '12345678')
+        .clear()
+        .should('have.value', '')
+    })
+
 })
 
