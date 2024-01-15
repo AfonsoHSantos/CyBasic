@@ -160,5 +160,16 @@ describe('Central de Atendimento ao Cliente TAT', function() {
             expect($input[0].files[0].name).to.equal('example.json')
         })
     })
+
+    it('CACTAT-20: Upload a file from fixtures dir usinga alias', function() {
+        cy.fixture('example.json').as('sampleFile')
+
+        cy.get("input[id='file-upload']")
+        .selectFile('@sampleFile')
+        .should(function($input){
+            expect($input[0].files[0].name).to.equal('example.json')
+        })
+    })
+
 })
 
