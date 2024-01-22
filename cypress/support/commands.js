@@ -11,9 +11,9 @@ Cypress.Commands.add('clickSubmitButton', function() {
 })
 
 Cypress.Commands.add('viewErrorMessage', function() {
-    cy.get("span[class='success']").should('be.visible')
+    cy.get("span[class='error']").should('be.visible')
 })
 
 Cypress.Commands.add('viewSuccesfullMessage', function() {
-    cy.get("span[class='error']").should('be.visible')
+    cy.get("span[class='success']").should('be.visible')
 })

@@ -20,7 +20,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         
         cy.clickSubmitButton()
 
-        cy.viewErrorMessage()
+        cy.viewSuccesfullMessage()
     })
 
     it('CACTAT-4: Error message is displayed when email with whrong format is added', function() {
@@ -34,7 +34,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         
         cy.clickSubmitButton()
 
-        cy.viewSuccesfullMessage()
+        cy.viewErrorMessage()
     })
 
     it('CACTAT-11: "Telefone" field remains blank when non-digits are added to the field', function() {
@@ -56,7 +56,7 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         
         cy.clickSubmitButton()
 
-        cy.viewSuccesfullMessage()
+        cy.viewErrorMessage()
     })
 
     it('CACTAT-6: Fill mandatory fields and clear them', function() {
@@ -94,13 +94,13 @@ describe('Central de Atendimento ao Cliente TAT', function() {
     it('CACTAT-7: Error message when mandatory fields are not filled', function() {
         cy.clickSubmitButton()
 
-        cy.viewSuccesfullMessage()
+        cy.viewErrorMessage()
     })
 
     it('CACTAT-9: Submit form using Custom Command', function() {
         cy.fillMandatoryFieldsAndSubmit()
 
-        cy.viewErrorMessage()
+        cy.viewSuccesfullMessage()
     })
 
     it('CACTAT-12: Selects the product "Youtube" by value', function() {
