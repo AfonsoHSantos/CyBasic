@@ -185,5 +185,21 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .should('have.text', 'CAC TAT - Política de privacidade')
     })
 
+    it('CACTAT-24: Show and hide success and error messages using .invoke() and .hide()', function() {
+        cy.get('.success')
+        .should('not.be.visible')
+        .invoke('show')
+        .should('be.visible')
+        .and('contain', 'Mensagem enviada com sucesso.')
+        .invoke('hide')
+        .should('not.be.visible')
+        cy.get('.error')
+        .should('not.be.visible')
+        .invoke('show')
+        .should('be.visible')
+        .and('contain', 'Valide os campos obrigatórios!')
+        .invoke('hide')
+        .should('not.be.visible')
+    })
 })
 
