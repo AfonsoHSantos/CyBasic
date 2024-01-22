@@ -201,5 +201,17 @@ describe('Central de Atendimento ao Cliente TAT', function() {
         .invoke('hide')
         .should('not.be.visible')
     })
+
+    it('CACTAT-25: Freeze error message using .clocl() and .tick()', function() {
+        cy.clock()
+      
+        cy.clickSubmitButton()
+      
+        cy.viewErrorMessage()
+
+        cy.tick(3000)
+      
+        cy.get('span[class="error"]').should('not.be.visible')
+    })
 })
 
