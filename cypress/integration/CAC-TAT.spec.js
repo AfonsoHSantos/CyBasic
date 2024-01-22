@@ -213,5 +213,14 @@ describe('Central de Atendimento ao Cliente TAT', function() {
       
         cy.get('span[class="error"]').should('not.be.visible')
     })
+
+    it('CACTAT-26: Fill text field using .invoke()', function() {
+        const longText = Cypress._.repeat('0123456789\n', 20)
+
+        cy.get('#open-text-area')
+        .invoke('val', longText)
+        .should('have.value', longText)
+    })
+
 })
 
