@@ -1,4 +1,4 @@
-# cypress-basico-v2
+# CyBasic
 
 Sample project for the basic course of the Talking About Testing online school.
 
@@ -6,25 +6,13 @@ Sample project for the basic course of the Talking About Testing online school.
 
 It is required to have Node.js and npm installed to run this project.
 
-> I used versions `v16.13.2` and `8.3.2` of Node.js and npm, respectively. I suggest you use the same or later versions.
-## Installation
-
-Run `npm install` (or `npm i` for the short version) to install the dev dependencies.
+[Docker](https://www.docker.com); Follow the steps described [here](https://github.com/wlsf82/cypress-intermediario-v2/blob/main/lessons/0.md) to use the docker image
 
 ## Tests
 
-The tests are documented in this Jira Task: [CAC TAT Test Automation](https://afonsohsantos.atlassian.net/browse/CT1-1)
-
-You can run the tests simulating a desktop or mobile viewport.
+The tests are documented in this Jira Task: [GitLab Test Automation](https://afonsohsantos.atlassian.net/jira/software/c/projects/GAUC/boards/6)
 
 ### Desktop
 
-Run `npm test` (or `npm t` for the short version) to run the test in headless mode on a desktop viewport.
+Run `npx cypress open` to open Cypress App and run the tests
 
-Or, run `npm run cy:open` to open Cypress in interactive mode on a desktop viewport.
-
-### Mobile
-
-Run `npm run test:mobile` to run the test in headless mode on a mobile viewport.
-
-Or, run `npm run cy:open:mobile` to open Cypress in interactive mode on a mobile viewport.
