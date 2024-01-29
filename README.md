@@ -1,6 +1,6 @@
 # CyBasic
 
-Sample project for the basic course of the Talking About Testing online school.
+Sample project for the intermediate course of the Talking About Testing online school.
 
 ## Pre-requirements
 
